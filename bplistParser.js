@@ -2,7 +2,6 @@
 
 // adapted from http://code.google.com/p/plist/source/browse/trunk/src/com/dd/plist/BinaryPropertyListParser.java
 
-var fs = require('fs');
 var bigInt = require("big-integer");
 var debug = false;
 
@@ -18,28 +17,6 @@ var EPOCH = 978307200000;
 var UID = exports.UID = function(id) {
   this.UID = id;
 }
-
-var parseFile = exports.parseFile = function (fileNameOrBuffer, callback) {
-  function tryParseBuffer(buffer) {
-    var err = null;
-    var result;
-    try {
-      result = parseBuffer(buffer);
-    } catch (ex) {
-      err = ex;
-    }
-    callback(err, result);
-  }
-
-  if (Buffer.isBuffer(fileNameOrBuffer)) {
-    return tryParseBuffer(fileNameOrBuffer);
-  } else {
-    fs.readFile(fileNameOrBuffer, function (err, data) {
-      if (err) { return callback(err); }
-      tryParseBuffer(data);
-    });
-  }
-};
 
 var parseBuffer = exports.parseBuffer = function (buffer) {
   var result = {};
