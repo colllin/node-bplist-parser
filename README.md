@@ -25,7 +25,7 @@ console.log(JSON.stringify(obj));
 
 (The MIT License)
 
-Copyright (c) 2012 Near Infinity Corporation
+Copyright (c) 2012 Near Infinity Corporation  
 Copyright (c) 2017 Collin Donahue-Oponski
 
 Permission is hereby granted, free of charge, to any person obtaining
