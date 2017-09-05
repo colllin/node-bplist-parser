@@ -12,13 +12,13 @@ $ npm install bplist-parser
 ## Quick Examples
 
 ```javascript
-var bplist = require('bplist-parser');
+var bplistParser = require('bplist-parser');
 
-bplist.parseFile('myPlist.bplist', function(err, obj) {
-  if (err) throw err;
+var someBuffer = Buffer.from('...');
 
-  console.log(JSON.stringify(obj));
-});
+var obj = bplistParser.parseBuffer(someBuffer);
+
+console.log(JSON.stringify(obj));
 ```
 
 ## License
@@ -26,6 +26,7 @@ bplist.parseFile('myPlist.bplist', function(err, obj) {
 (The MIT License)
 
 Copyright (c) 2012 Near Infinity Corporation
+Copyright (c) 2017 Collin Donahue-Oponski
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
