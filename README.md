@@ -6,7 +6,7 @@ Binary Mac OS X Plist (property list) parser.
 ## Installation
 
 ```bash
-$ npm install bplist-parser
+$ npm install github:colllin/node-bplist-parser
 ```
 
 ## Quick Examples
